@@ -16,7 +16,7 @@ const storage = multer.diskStorage({
 const upload = multer({ storage });
 
 
-router6.post("/upload", verifyToken(), upload.single("file"), uploadResource);
+router6.post("/upload",  upload.single("file"), uploadResource);
 router6.get("/get", verifyToken(), getResources);
 router6.get("/download/:filename", verifyToken(), downloadResource);
 
